@@ -1,0 +1,96 @@
+// File: CastingCompanyWebsite.jsx
+
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Mail, Phone, Factory } from "lucide-react"
+import { motion } from "framer-motion"
+
+export default function Casting Company(Foundry) {
+  return (
+    <div className="bg-gray-50 text-gray-800">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-gray-900 to-gray-700 text-white p-12 flex flex-col items-center justify-center text-center">
+        <motion.h1 
+          className="text-4xl md:text-6xl font-bold mb-4"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          JMG Casting Pvt.Ltd.
+        </motion.h1>
+        <p className="text-lg md:text-xl mb-6 max-w-2xl">
+          Leading the industry with advanced metal casting techniques and exceptional quality.
+        </p>
+        <Button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-2xl shadow-md">
+          We believe in Quality Not Quantity
+        </Button>
+      </section>
+
+      {/* About Section */}
+      <section className="p-8 md:p-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">About Us</h2>
+          <p className="text-lg mb-4">
+             We are a leading casting company specializing in precision metal components for automotive, and industrial applications. Our state-of-the-art facilities ensure the highest quality and reliability.
+          </p>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="bg-white p-8 md:p-16">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-10">Our Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="shadow-lg hover:shadow-xl transition">
+              <CardContent className="p-6">
+                <Factory className="h-12 w-12 mb-4 mx-auto text-yellow-500" />
+                <h3 className="text-xl font-semibold mb-2">Sand Casting</h3>
+                <p>Cost-effective casting solutions for complex shapes and large components.</p>
+              </CardContent>
+            </Card>
+            <Card className="shadow-lg hover:shadow-xl transition">
+              <CardContent className="p-6">
+                <Factory className="h-12 w-12 mb-4 mx-auto text-yellow-500" />
+                <h3 className="text-xl font-semibold mb-2">Investment Casting</h3>
+                <p>High-precision casting with excellent surface finish, ideal for intricate parts.</p>
+              </CardContent>
+            </Card>
+            <Card className="shadow-lg hover:shadow-xl transition">
+              <CardContent className="p-6">
+                <Factory className="h-12 w-12 mb-4 mx-auto text-yellow-500" />
+                <h3 className="text-xl font-semibold mb-2">Die Casting, Sand Casting , Mould Casting </h3>
+                <p>Efficient, high-volume production with excellent dimensional accuracy.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-gray-100 p-8 md:p-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
+          <p className="mb-4">We'd love to hear about your project and let us discuss about it how we can help.</p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <div className="flex items-center gap-2">
+              <Mail className="h-5 w-5 text-gray-600" />
+              <span>info@JMGcastingpvtltd.com</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone className="h-5 w-5 text-gray-600" />
+              <span>+91 8102514402 </span>
+            </div>
+          </div>
+          <Button className="mt-6 bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-2xl shadow-md">
+            Send Message
+          </Button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-gray-300 text-center p-4">
+        &copy; 2025 JMG Casting Pvt.Ltd . All rights reserved.
+      </footer>
+    </div>
+  )
+}
